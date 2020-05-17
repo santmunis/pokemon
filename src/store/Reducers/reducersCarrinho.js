@@ -1,4 +1,4 @@
-import { ADD_CARRINHO, LISTA_CARRINHO, DELETE_CARRINHO } from '../types'
+import { ADD_CARRINHO, LISTA_CARRINHO, DELETE_CARRINHO, FINALIZA_CARRINHO } from '../types'
 
 let initialState
 if(localStorage.getItem("pokemon/carrinhoCompras") === undefined || localStorage.getItem("pokemon/carrinhoCompras") === null){
@@ -31,6 +31,11 @@ export default function reducerEditar(state = initialState, action) {
             localStorage.removeItem('pokemon/carrinhoCompras')
             localStorage.setItem('pokemon/carrinhoCompras', JSON.stringify(novoState))
         return novoState
+        case FINALIZA_CARRINHO:
+            const stateFinalCarrinho = []
+            localStorage.removeItem('pokemon/carrinhoCompras')
+            localStorage.setItem('pokemon/carrinhoCompras', JSON.stringify(stateFinalCarrinho))
+            return stateFinalCarrinho
       default: return state
    }
 }

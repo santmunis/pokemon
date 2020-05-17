@@ -1,11 +1,12 @@
 import api from '../services/api'
 import { 
-        FETCH_FOGO,
+        FETCH_POKEMON,
         ADD_CARRINHO,
         LISTA_CARRINHO,
         DELETE_CARRINHO,
         HANDLE_CHANGE,
-        HANDLE_CLICK      
+        HANDLE_CLICK,
+        FINALIZA_CARRINHO      
 } from './types';
 
 
@@ -44,7 +45,7 @@ export const getSprite = pokemons => {
 }
 export const listaPokemonsSuccess = pokemons => {
     return {
-        type: FETCH_FOGO,
+        type: FETCH_POKEMON,
         pokemons
     }
 }
@@ -67,6 +68,12 @@ export const deletaCarrinho = (pokemonsDeletado) => {
     return {
         type: DELETE_CARRINHO,
         pokemonsDeletado
+    }
+}
+
+export const finalizaCarrinho = () => {
+    return {
+        type: FINALIZA_CARRINHO,
     }
 }
 

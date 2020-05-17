@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.css'
-import { ListaCarrinho, deletaCarrinho }
+import { ListaCarrinho, deletaCarrinho, finalizaCarrinho }
     from './../../store/action'
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -45,9 +45,11 @@ class ResumoPedido extends React.Component {
     
     handleClickOpen = () => {
         this.setState({open:true})
+        
     };
     
     handleClose = () => {
+        this.props.concluiCarrinho()
         this.setState({open:false})
     };
     render() {
@@ -114,8 +116,11 @@ const mapDispatchToProps = dispatch => {
         },
         deletaCarrinhoItens: (pokemonsDeletado) =>{
             dispatch(deletaCarrinho(pokemonsDeletado))
+        },
+        concluiCarrinho: () =>{
+            dispatch(finalizaCarrinho())
         }
+
     }
 }
-
 export default connect(mapStateToProps, mapDispatchToProps)(ResumoPedido)
