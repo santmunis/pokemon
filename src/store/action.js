@@ -3,7 +3,9 @@ import {
         FETCH_FOGO,
         ADD_CARRINHO,
         LISTA_CARRINHO,
-        DELETE_CARRINHO,       
+        DELETE_CARRINHO,
+        HANDLE_CHANGE,
+        HANDLE_CLICK      
 } from './types';
 
 
@@ -65,5 +67,19 @@ export const deletaCarrinho = (pokemonsDeletado) => {
     return {
         type: DELETE_CARRINHO,
         pokemonsDeletado
+    }
+}
+
+export const handleChange = (todosPerPage) => {
+    return {
+        type: HANDLE_CHANGE,
+        todosPerPage
+    }
+}
+
+export const handleClick = (currentPage) => {
+    return {
+        type: HANDLE_CLICK,
+        currentPage
     }
 }

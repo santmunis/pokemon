@@ -3,3 +3,6 @@ export const FETCH_FOGO = 'FETCH_FOGO'
 export const ADD_CARRINHO = 'ADD_CARRINHO'
 export const DELETE_CARRINHO = 'DELETE_CARRINHO'
 export const LISTA_CARRINHO = 'LISTA_CARRINHO'
+
+export const HANDLE_CHANGE = 'HANDLE_CHANGE'
+export const HANDLE_CLICK = 'HANDLE_CLICK'
