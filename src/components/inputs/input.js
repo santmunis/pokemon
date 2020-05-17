@@ -7,7 +7,7 @@ export default class Input extends React.Component {
     render() {
         return (
             <div className="divBusca">
-                <FontAwesomeIcon icon={faSearch} style={{position:'absolute',zIndex:1,top:105,left:60, color:'red'}} />
+                <FontAwesomeIcon icon={faSearch} style={{position:'absolute',zIndex:1,top:457,left:60, color:'red'}} />
                 <input 
                     type="text" 
                     className="txtBusca" 
