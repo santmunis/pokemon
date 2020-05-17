@@ -15,11 +15,33 @@ class Pagination extends React.Component {
         };
       }
 
-      handleClick = (event, value) => {
-        this.setState({
-          currentPage: Number(value)
-        });
-      }
+      tipoPokemon = (tipo) =>{
+        var background_color= ''
+        switch (tipo) {
+            case 'Fogo':
+                    background_color = '#ff4040';
+                
+            break;
+            case 'Agua':
+                    background_color = '#6fbbd3'       
+            break;
+            case 'Ghost':
+                    background_color = '#993399'       
+            break;
+            case 'Ground':
+                background_color = '#eb7600'       
+            break;
+            default: 
+            break;
+        }
+        
+        var cor = {
+            background: background_color,
+        }
+       
+
+        return cor
+    }
       
      
     render() {
@@ -31,6 +53,7 @@ class Pagination extends React.Component {
         const renderPageNumbers = pageNumbers.map(number => {
             return (
               <li
+                style={this.tipoPokemon(this.props.type)}
                 key={number}
                 id={number}
                 onClick={(e)=>{this.props.handleClick(e.target.id)}}

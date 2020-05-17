@@ -9,21 +9,27 @@ import './style.css'
 export default class Home extends React.Component {
 
     tipoPokemon = (tipo) =>{
-        var backgroundGradient= ''
+        var background_color= ''
         switch (tipo) {
             case 'Fogo':
-                backgroundGradient = '#ff4040';
+                background_color = '#ff4040';
                 
             break;
             case 'Agua':
-                    backgroundGradient = 'linear-gradient(90deg, rgba(24,12,237,1) 0%, rgba(35,35,238,1) 35%, rgba(0,212,255,1) 100%)';       
+                background_color = '#6fbbd3'       
+            break;
+            case 'Ghost':
+                background_color = '#993399'       
+            break;
+            case 'Ground':
+                background_color = '#eb7600'       
             break;
             default: 
             break;
         }
         
         var div = {
-            background: backgroundGradient,
+            background: background_color,
             height:'80px',
             display:'flex',
             flexDirection:'row',
@@ -37,7 +43,7 @@ export default class Home extends React.Component {
     render() {
         return (
             <>
-                <div style={this.tipoPokemon('Fogo')}>
+                <div style={this.tipoPokemon(this.props.type)}>
                     <div className='logo'>
                         <Link to='/'>
                             <img src={logo} width="170px" height="50px" alt="Logo da loja" />
@@ -48,13 +54,13 @@ export default class Home extends React.Component {
                     <Link to='/'>
                         <img src={fire}   className="img-menu" alt="type fire"/>
                     </Link>
-                    <Link to='/'>
+                    <Link to='/water'>
                         <img src={water}  className="img-menu" alt="type water"/>
                     </Link>
-                    <Link to='/'>
+                    <Link to='/ghost'>
                         <img src={ghost}  className="img-menu" alt="type ghost"/>
                     </Link>
-                    <Link to='/'>
+                    <Link to='/ground'>
                         <img src={ground} className="img-menu"  alt="type ground"/>
                     </Link>
                 </div>

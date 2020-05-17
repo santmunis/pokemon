@@ -7,14 +7,14 @@ import Footer from '../../components/footer/footer'
 import { listaPokemons }
     from './../../store/action'
 import { connect } from 'react-redux'
-import './index.css'
+import './../home/index.css'
 
-class Home extends React.Component {
+class Ghost extends React.Component {
     state = {
         campoPesquisa: ''
     }
     componentDidMount = () =>{
-        this.props.fetchPokemonFogo('fire')
+        this.props.fetchPokemonGhost('ghost')
     }
 
     buscarPor = name => {
@@ -24,16 +24,16 @@ class Home extends React.Component {
     render() {
         return (
             <div className="container">
-                <div className="header"><Menu type="Fogo"/></div>
+                <div className="header"><Menu type="Ghost"/></div>
                 <div className="serchBar">
                     <BarraPesquisa onChange={event => this.setState({ campoPesquisa: event.target.value })}
                     value={this.state.campoPesquisa}/>
                 </div>
                 <div className="main">
-                    <CardPokemon pokemon={this.props.fogo} type="Fogo" campoPesquisa={this.buscarPor(this.state.campoPesquisa)}/>
+                    <CardPokemon pokemon={this.props.ghost} type="Ghost" campoPesquisa={this.buscarPor(this.state.campoPesquisa)}/>
                 </div>
                 <div className="sideBar"><ResumoPedido/></div>
-                <div className="footer"><Footer type="Fogo"/></div>
+                <div className="footer"><Footer type="Ghost"/></div>
             </div>
         )
     }
@@ -42,16 +42,16 @@ class Home extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        fogo: state.pokemon
+        ghost: state.pokemon
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        fetchPokemonFogo: (fire) => {
-            dispatch(listaPokemons(fire))
+        fetchPokemonGhost: (ghost) => {
+            dispatch(listaPokemons(ghost))
         }
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home)
+export default connect(mapStateToProps, mapDispatchToProps)(Ghost)
