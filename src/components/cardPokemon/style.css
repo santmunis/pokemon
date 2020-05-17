@@ -1,0 +1,65 @@
+.card-pokemon{
+    width:220px;
+    margin-right: 28px;
+    margin-bottom: 15px;
+    max-height: 260px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 6px;
+}
+
+.title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(102, 102, 102);
+    font-family: Helvetica, Arial, sans-serif;
+    margin-bottom:0; 
+}
+
+.preco{
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: rgb(51, 51, 51);
+    font-size: 16px;
+    margin-top:0; 
+}
+
+.button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #B4000F;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: white;
+    font-weight: bold;
+    align-self: normal;
+    cursor: pointer;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+}
+
+.content-pokemon{
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.pokemon-img{
+    margin:0 auto 0 auto;
+    width:200px;
+    height:150px;
+}
