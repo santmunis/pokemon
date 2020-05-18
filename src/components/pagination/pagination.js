@@ -82,7 +82,7 @@ class Pagination extends React.Component {
                     {
                         (this.props.arrayCompleto !== this.props.arrayUsado)
                         ?<div className="pagination-mobile" style={{borderColor:this.tipoPokemon(this.props.type)}} onClick={()=>{this.props.handleChange(this.props.pagination.todosPerPage+10)}}>
-                            <p style={{color:this.tipoPokemon(this.props.type)}}>VER MAIS</p>
+                            <p style={{color:this.tipoPokemon(this.props.type)}}>VE MAIS</p>
                          </div>
                         :null
                     }
