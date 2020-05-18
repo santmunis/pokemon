@@ -67,7 +67,9 @@
 .grid-collum-full{
     grid-column: 1/5;
 }
-
+.pagination-mobile{
+    display: none;
+}
 @media (max-width: 575.98px) {
     .grid-collum-full{
         grid-column: 1/3;

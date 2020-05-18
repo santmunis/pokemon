@@ -28,8 +28,16 @@
         padding: 0;
         overflow: hidden;
     }
-    .tirar{
-        width: 100vw;
+    .mobile-display-none{
+        display: none;
+    }
+    .pagination-mobile{
+        display: flex !important;
+        width: 90vw;
+        border: 2px solid #ff4040;
+        justify-content: center;
+        color:#ff4040;
+        font: 700 16px/23px "Ubuntu", sans-serif;
     }
     .pageNumber li{
         padding: 10px 14px;

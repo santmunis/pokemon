@@ -2,7 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Pagination from './../pagination/pagination'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
-import { addCarrinho,handleClick }
+import { addCarrinho, handleClick, handleChange }
     from './../../store/action'
 import { connect } from 'react-redux'
 import './style.css'
@@ -42,6 +42,7 @@ class CardPokemon extends React.Component {
         const indexOfLastTodo = pagination.currentPage * pagination.todosPerPage;// Define o limite Final
         const indexOfFirstTodo = indexOfLastTodo - pagination.todosPerPage;// Define o limite inicial
 
+        const pokemon_filtrado = pokemon.filter(pokemon =>{if(pokemon.url.front_default !== null){return pokemon}});
         const currentTodos = pokemon.filter(campoPesquisa) //filtra pokemons de acordo com o que for digitado na barra de pesquisa
                             .slice(indexOfFirstTodo, indexOfLastTodo)
                             .filter(pokemon =>{if(pokemon.url.front_default !== null){return pokemon}}); // Filtra pokemons sem foto
@@ -79,7 +80,7 @@ class CardPokemon extends React.Component {
                 }
             
                 <div className="grid-collum-full">
-                    <Pagination pageNumbers={pageNumbers} type={this.props.type}/>
+                    <Pagination arrayCompleto={pokemon_filtrado.length} arrayUsado={currentTodos.length} pageNumbers={pageNumbers} type={this.props.type}/>
                 </div>
             </>
         )
@@ -98,6 +99,9 @@ const mapDispatchToProps = dispatch => {
         },
         handleClick: (currentPage) => {
             dispatch(handleClick(currentPage))
+        },
+        handleChange: (todosPerPage) => {
+            dispatch(handleChange(todosPerPage))
         }
     }
 }

@@ -35,9 +35,7 @@ class Pagination extends React.Component {
             break;
         }
         
-        var cor = {
-            background: background_color,
-        }
+       var cor = background_color
        
 
         return cor
@@ -53,7 +51,7 @@ class Pagination extends React.Component {
         const renderPageNumbers = pageNumbers.map(number => {
             return (
               <li
-                style={this.tipoPokemon(this.props.type)}
+                style={{backgroundColor:this.tipoPokemon(this.props.type)}}
                 key={number}
                 id={number}
                 onClick={(e)=>{this.props.handleClick(e.target.id)}}
@@ -63,8 +61,8 @@ class Pagination extends React.Component {
             );
           });
         return (
-            <div className="display-flex-row">
-                <div className="display-flex-row itens-por-pagina display-none">
+            <div className="display-flex-row ">
+                <div className="display-flex-row itens-por-pagina mobile-display-none">
                     <p>Itens por página</p>
                         <FormControl variant="outlined" >
                             <Select
@@ -77,10 +75,18 @@ class Pagination extends React.Component {
                             </Select>
                         </FormControl>
                 </div>
-                <div className="tirar">
-                    <ul className="pageNumber">
+                <div>
+                    <ul className="pageNumber mobile-display-none">
                         {renderPageNumbers}
                     </ul>
+                    {
+                        (this.props.arrayCompleto !== this.props.arrayUsado)
+                        ?<div className="pagination-mobile" style={{borderColor:this.tipoPokemon(this.props.type)}} onClick={()=>{this.props.handleChange(this.props.pagination.todosPerPage+10)}}>
+                            <p style={{color:this.tipoPokemon(this.props.type)}}>VER MAIS</p>
+                         </div>
+                        :null
+                    }
+                    
                 </div>
         </div>
         )
