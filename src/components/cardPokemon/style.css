@@ -1,8 +1,6 @@
 .card-pokemon{
-    width:300px;
-    margin-right: 28px;
+    width: 97%;
     margin-bottom: 15px;
-    height: 400px;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -62,6 +60,10 @@
 
 .pokemon-img{
     margin:0 auto 0 auto;
-    width:270px;
-    height:270px;
+    width:90%;
+    height:90%;
+}
+
+.grid-collum-full{
+    grid-column: 1/5;
 }

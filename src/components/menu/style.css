@@ -1,6 +1,6 @@
 .img-menu{
-    width: 300px;
-    height: 320px;
+    max-width: 300px;
+    max-height: 320px;
     margin: 20px 40px 0 0;
 }
 

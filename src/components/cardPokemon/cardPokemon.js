@@ -55,10 +55,10 @@ class CardPokemon extends React.Component {
         }
         return (
             <>
-                <div>
+                <div className="grid-collum-full">
                     <Pagination pageNumbers={pageNumbers} type={this.props.type}/>
                 </div>
-                <div className="content-pokemon">    
+                  
                 {
                     currentTodos.map(pokemon =>{
                         return(
@@ -77,8 +77,8 @@ class CardPokemon extends React.Component {
                         )
                     })
                 }
-                </div>
-                <div>
+            
+                <div className="grid-collum-full">
                     <Pagination pageNumbers={pageNumbers} type={this.props.type}/>
                 </div>
             </>
