@@ -22,3 +22,22 @@
     padding: 16px 20px;
     color: #faf9f9;
 }
+
+@media (max-width: 575.98px) {
+    .pageNumber{
+        padding: 0;
+        overflow: hidden;
+    }
+    .tirar{
+        width: 100vw;
+    }
+    .pageNumber li{
+        padding: 10px 14px;
+    }
+    .display-flex-row{
+        justify-content: center;
+    }
+    .display-none{
+        display: none;
+    }
+  }

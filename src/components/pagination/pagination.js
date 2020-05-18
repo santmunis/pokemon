@@ -64,7 +64,7 @@ class Pagination extends React.Component {
           });
         return (
             <div className="display-flex-row">
-                <div className="display-flex-row itens-por-pagina">
+                <div className="display-flex-row itens-por-pagina display-none">
                     <p>Itens por página</p>
                         <FormControl variant="outlined" >
                             <Select
@@ -77,7 +77,7 @@ class Pagination extends React.Component {
                             </Select>
                         </FormControl>
                 </div>
-                <div>
+                <div className="tirar">
                     <ul className="pageNumber">
                         {renderPageNumbers}
                     </ul>

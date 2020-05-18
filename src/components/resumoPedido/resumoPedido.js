@@ -67,6 +67,7 @@ class ResumoPedido extends React.Component {
                             :null
                         }
                     </div>
+                    <div style={{maxHeight:'500px',overflow:'scroll',overflowX:'hidden'}}>
                     {
                         this.props.carrinho.map((pokemon,indice) =>{
                             var keyProp = pokemon.name+indice
@@ -83,6 +84,7 @@ class ResumoPedido extends React.Component {
                         })
                         
                     }
+                    </div>
                 </div>
                 <div className="padding">
                     <hr style={{opacity:'0.3'}}/>

@@ -55,7 +55,7 @@ class CardPokemon extends React.Component {
         }
         return (
             <>
-                <div className="grid-collum-full">
+                <div className="grid-collum-full display-none">
                     <Pagination pageNumbers={pageNumbers} type={this.props.type}/>
                 </div>
                   

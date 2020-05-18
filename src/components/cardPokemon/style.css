@@ -67,3 +67,12 @@
 .grid-collum-full{
     grid-column: 1/5;
 }
+
+@media (max-width: 575.98px) {
+    .grid-collum-full{
+        grid-column: 1/3;
+    }
+    .card-pokemon{
+        width: 90%;
+    }
+  }
