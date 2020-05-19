@@ -1,12 +1,12 @@
 import api from '../services/api'
-import { 
-        FETCH_POKEMON,
-        ADD_CARRINHO,
-        LISTA_CARRINHO,
-        DELETE_CARRINHO,
-        HANDLE_CHANGE,
-        HANDLE_CLICK,
-        FINALIZA_CARRINHO      
+import {
+    FETCH_POKEMON,
+    ADD_CARRINHO,
+    LISTA_CARRINHO,
+    DELETE_CARRINHO,
+    HANDLE_CHANGE,
+    HANDLE_CLICK,
+    FINALIZA_CARRINHO
 } from './types';
 
 
@@ -19,7 +19,7 @@ export const listaPokemons = (tipo) => {
             .catch(error => {
                 throw (error)
             })
-        }
+    }
 }
 
 export const getSprite = pokemons => {

@@ -1,42 +1,41 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
-import logo from  './../../Assets/Pokestore.png'
-import fire from  './../../Assets/fire.jpg'
-import water from  './../../Assets/water.jpg'
-import ghost from  './../../Assets/ghost.jpg'
-import ground from  './../../Assets/ground.jpg'
+import { Link } from 'react-router-dom'
+import logo from './../../Assets/Pokestore.png'
+import fire from './../../Assets/fire.jpg'
+import water from './../../Assets/water.jpg'
+import ghost from './../../Assets/ghost.jpg'
+import ground from './../../Assets/ground.jpg'
 import './style.css'
 export default class Home extends React.Component {
 
-    tipoPokemon = (tipo) =>{
-        var background_color= ''
+    tipoPokemon = (tipo) => {
+        var background_color = ''
         switch (tipo) {
             case 'Fogo':
                 background_color = '#ff4040';
-                
-            break;
+                break;
             case 'Agua':
-                background_color = '#6fbbd3'       
-            break;
+                background_color = '#6fbbd3'
+                break;
             case 'Ghost':
-                background_color = '#993399'       
-            break;
+                background_color = '#993399'
+                break;
             case 'Ground':
-                background_color = '#eb7600'       
-            break;
-            default: 
-            break;
+                background_color = '#eb7600'
+                break;
+            default:
+                break;
         }
-        
+
         var div = {
             background: background_color,
-            height:'80px',
-            display:'flex',
-            flexDirection:'row',
-            alignItems:'center',
+            height: '80px',
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
             justifyContent: 'space-around'
         }
-       
+
 
         return div
     }
@@ -52,16 +51,16 @@ export default class Home extends React.Component {
                 </div>
                 <div className="content-img-menu">
                     <Link to='/'>
-                        <img src={fire}   className="img-menu" alt="type fire"/>
+                        <img src={fire} className="img-menu" alt="type fire" />
                     </Link>
                     <Link to='/water'>
-                        <img src={water}  className="img-menu" alt="type water"/>
+                        <img src={water} className="img-menu" alt="type water" />
                     </Link>
                     <Link to='/ghost'>
-                        <img src={ghost}  className="img-menu" alt="type ghost"/>
+                        <img src={ghost} className="img-menu" alt="type ghost" />
                     </Link>
                     <Link to='/ground'>
-                        <img src={ground} className="img-menu"  alt="type ground"/>
+                        <img src={ground} className="img-menu" alt="type ground" />
                     </Link>
                 </div>
             </>

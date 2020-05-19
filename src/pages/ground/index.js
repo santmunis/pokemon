@@ -13,7 +13,7 @@ class Water extends React.Component {
     state = {
         campoPesquisa: ''
     }
-    componentDidMount = () =>{
+    componentDidMount = () => {
         this.props.fetchPokemonGround('ground')
     }
 
@@ -24,16 +24,16 @@ class Water extends React.Component {
     render() {
         return (
             <div className="container">
-                <div className="header"><Menu type="Ground"/></div>
+                <div className="header"><Menu type="Ground" /></div>
                 <div className="serchBar">
                     <BarraPesquisa onChange={event => this.setState({ campoPesquisa: event.target.value })}
-                    value={this.state.campoPesquisa}/>
+                        value={this.state.campoPesquisa} />
                 </div>
                 <div className="main">
-                    <CardPokemon pokemon={this.props.ground} type="Ground" campoPesquisa={this.buscarPor(this.state.campoPesquisa)}/>
+                    <CardPokemon pokemon={this.props.ground} type="Ground" campoPesquisa={this.buscarPor(this.state.campoPesquisa)} />
                 </div>
-                <div className="sideBar"><ResumoPedido/></div>
-                <div className="footer"><Footer type="Ground"/></div>
+                <div className="sideBar"><ResumoPedido /></div>
+                <div className="footer"><Footer type="Ground" /></div>
             </div>
         )
     }

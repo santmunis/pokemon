@@ -13,7 +13,7 @@ class Ghost extends React.Component {
     state = {
         campoPesquisa: ''
     }
-    componentDidMount = () =>{
+    componentDidMount = () => {
         this.props.fetchPokemonGhost('ghost')
     }
 
@@ -24,16 +24,16 @@ class Ghost extends React.Component {
     render() {
         return (
             <div className="container">
-                <div className="header"><Menu type="Ghost"/></div>
+                <div className="header"><Menu type="Ghost" /></div>
                 <div className="serchBar">
                     <BarraPesquisa onChange={event => this.setState({ campoPesquisa: event.target.value })}
-                    value={this.state.campoPesquisa}/>
+                        value={this.state.campoPesquisa} />
                 </div>
                 <div className="main">
-                    <CardPokemon pokemon={this.props.ghost} type="Ghost" campoPesquisa={this.buscarPor(this.state.campoPesquisa)}/>
+                    <CardPokemon pokemon={this.props.ghost} type="Ghost" campoPesquisa={this.buscarPor(this.state.campoPesquisa)} />
                 </div>
-                <div className="sideBar"><ResumoPedido/></div>
-                <div className="footer"><Footer type="Ghost"/></div>
+                <div className="sideBar"><ResumoPedido /></div>
+                <div className="footer"><Footer type="Ghost" /></div>
             </div>
         )
     }
